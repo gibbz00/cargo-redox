@@ -1,11 +1,11 @@
 use xshell::Shell;
 
-use crate::{repo::RepoSubCommands, utils::execute::Execute};
+use crate::utils::execute::Execute;
 
 #[derive(clap::Args)]
 pub struct PodmanArgs {
     #[command(subcommand)]
-    commands: RepoSubCommands,
+    commands: PodmanSubCommands,
 }
 
 impl Execute for PodmanArgs {
