@@ -17,7 +17,7 @@ impl Execute for RepoArgs {
 }
 
 #[derive(clap::Subcommand)]
-enum RepoSubCommands {
+pub enum RepoSubCommands {
     RecursiveClone,
 }
 
