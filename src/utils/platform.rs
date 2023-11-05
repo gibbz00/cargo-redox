@@ -5,6 +5,7 @@ use xshell::{cmd, Shell};
 pub enum KernelName {
     Linux,
     FreeBSD,
+    Darwin,
 }
 
 pub trait PlatformQuery {
@@ -33,6 +34,13 @@ mod tests {
     #[cfg(target_os = "freebsd")]
     fn gets_free_bsd_kernel_name() -> anyhow::Result<()> {
         assert_eq!(KernelName::FreeBSD, Shell::new()?.kernel_name()?);
+        Ok(())
+    }
+
+    #[test]
+    #[cfg(target_os = "macos")]
+    fn gets_darwin_kernel_name() -> anyhow::Result<()> {
+        assert_eq!(KernelName::Darwin, Shell::new()?.kernel_name()?);
         Ok(())
     }
 }
