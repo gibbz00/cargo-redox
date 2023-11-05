@@ -1,8 +1,7 @@
 [package]
-name = "cargo-redox"
+name = "cargo-redox-podman"
 version = "0.1.0"
 edition = "2021"
 
 [dependencies]
-cargo-redox-podman = { path = "../podman" }
 clap.workspace = true
