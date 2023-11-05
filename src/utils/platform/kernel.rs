@@ -13,8 +13,7 @@ pub enum Kernel {
 impl PlatformQuery for Kernel {
     fn detect() -> anyhow::Result<Self> {
         let shell = Shell::new()?;
-        let uname_string = cmd!(shell, "uname").read()?;
-        uname_string.parse::<Kernel>().map_err(Into::into)
+        cmd!(shell, "uname --kernel-name").read()?.parse().map_err(Into::into)
     }
 }
 
