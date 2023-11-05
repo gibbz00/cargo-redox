@@ -5,4 +5,6 @@ edition = "2021"
 
 [dependencies]
 cargo-redox-podman = { path = "../podman" }
+cargo-redox-repo = { path = "../repo" }
+
 clap.workspace = true
