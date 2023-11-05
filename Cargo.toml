@@ -6,4 +6,5 @@ edition = "2021"
 [dependencies]
 anyhow = "1"
 clap = { version = "4", features = ["derive"] }
+strum = { version = "0.25", features = ["derive"] }
 xshell = "0.2"
