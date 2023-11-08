@@ -1,9 +1,9 @@
-use strum::EnumString;
+use strum::{AsRefStr, EnumString};
 use xshell::{cmd, Shell};
 
 use super::PlatformQuery;
 
-#[derive(EnumString)]
+#[derive(EnumString, AsRefStr)]
 pub enum Architecture {
     #[allow(non_camel_case_types)]
     aarch64,
