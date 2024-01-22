@@ -7,6 +7,6 @@ edition = "2021"
 anyhow = "1"
 clap = { version = "4", features = ["derive"] }
 strum = { version = "0.25", features = ["derive"] }
-which = "5"
+which = "6"
 xshell = "0.2"
 num_cpus = "1"
